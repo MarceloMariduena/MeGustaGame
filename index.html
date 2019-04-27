@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <title>Me Gusta Game</title>
+</head>
+
+<body onload = "startGame()">
+
+<div class="grid">
+
+    <h1 id="title">Me Gusta Game</h1>
+
+    <canvas id="canvas"></canvas>
+
+    <div>
+        <button onmousedown = "moveUp()" onmouseup = "clearMove()">UP</button>
+        <br/>
+        <button onmousedown = "moveLeft()" onmouseup = "clearMove()">LEFT</button>
+        <button onmousedown = "moveDown()" onmouseup = "clearMove()">DOWN</button>
+        <button onmousedown = "moveRight()" onmouseup = "clearMove()">RIGHT</button>
+    </div>
+
+    <footer>
+        Coded by <a href="https://github.com/marcelomariduena" target="_blank">Marcelo Mariduena</a>
+    </footer>
+
+</div>
+
+<script src="main.js"></script> 
+
+</body>
+</html>
