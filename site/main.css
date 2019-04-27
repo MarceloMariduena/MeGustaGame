@@ -1,0 +1,50 @@
+body {font-family: Lato, Arial;}
+
+a {
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.5s;
+} 
+
+button {
+    width: 120px;
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.grid {
+    text-align: center;
+    display: grid;
+    grid-gap: 21px;
+    grid-template-columns: 1fr;
+}
+
+#title, canvas {
+    box-shadow: 3px 3px 3px #333;
+    padding: 10px;
+}
+
+#title {
+    color: white;
+    background-color: black;
+    width: 300px;
+    margin: auto;
+}
+
+#canvas {
+    display: block;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+footer a:hover {
+    box-shadow: 3px 3px 3px #333;
+    transition: 0.5s;
+}
