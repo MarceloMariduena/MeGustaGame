@@ -5,16 +5,23 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" type="text/css" href="main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'/>
   <title>Me Gusta Game</title>
 </head>
 
-<body onload = "startGame()">
+<body>
 
 <div class="grid">
 
     <h1 id="title">Me Gusta Game</h1>
 
-    <canvas id="canvas"></canvas>
+    <div>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div>
+        <button class="primary" onclick="startGame()">START</button>
+    </div>
 
     <div>
         <button onmousedown = "moveUp()" onmouseup = "clearMove()">UP</button>

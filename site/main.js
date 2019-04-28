@@ -12,7 +12,7 @@ let myGameArea = {
         // "this" refers to the original object: myGameArea
         this.context = this.canvas.getContext("2d");
         //Sets the width and height of the canvas
-        this.canvas.width = 540;
+        this.canvas.width = 600;
         this.canvas.height = 400;
         //Sets the speed of the blocks
         this.interval = setInterval(updateGameArea, 20);
@@ -107,8 +107,8 @@ function updateGameArea(){
         minGap = 50;
         maxGap = 200;
         gap = Math.floor((Math.random()*(maxGap - minGap + 1)) + minGap);
-        myObstacles.push(new component(10, height, "blue", x, 0));
-        myObstacles.push(new component(10, x-height-gap, "blue", x, height + gap));
+        myObstacles.push(new component(10, height, "white", x, 0));
+        myObstacles.push(new component(10, x-height-gap, "white", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1){
     	myObstacles[i].x += -1;
@@ -154,5 +154,5 @@ function clearMove(){
 function startGame() {
 	myGameArea.start();
     myGamePiece = new component(40, 40, "meGusta1.png",10,120, "image");
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myScore = new component("30px", "Lato", "black", 280, 40, "text");
 }
