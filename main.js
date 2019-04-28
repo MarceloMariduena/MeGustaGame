@@ -1,29 +1,33 @@
+//Variable for holding the image of the game piece
 let myGamePiece;
+//Array
 let myObstacles = []; 
+//Object
 let myGameArea = {
-	canvas: document.getElementById("canvas"),
+    //Select the element with id "canvas"
+    canvas: document.getElementById("canvas"),
+    //Start method
 	start(){
-    	this.canvas.width = 750;
-        this.canvas.height = 550;
+        //.getContext() method returns a drawing context on the canvas
+        // "this" refers to the original object: myGameArea
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        //Sets the width and height of the canvas
+        this.canvas.width = 540;
+        this.canvas.height = 400;
+        //Sets the speed of the blocks
         this.interval = setInterval(updateGameArea, 20);
+        //Initial frame
         this.frameNo = 0;
     },
     clear(){
-    	this.context.clearRect(0,0,this.canvas.width, this.canvas.height);
+    	this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
     stop(){
     	clearInterval(this.interval);
     }
 }
 
-function startGame() {
-	myGameArea.start();
-    myGamePiece = new component(40, 40, "meGusta1.png",10,120, "image");
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-}
-
+//This function creates the components (things) going into the canvas
 function component(width, height, color, x, y, type){
 	this.width = width;
     this.height = height;
@@ -71,6 +75,7 @@ function component(width, height, color, x, y, type){
         return crashed;
     };
 }
+
 
 function updateGameArea(){
 	for (i = 0; i < myObstacles.length; i += 1){
@@ -144,4 +149,10 @@ function moveRight(){
 function clearMove(){
     myGamePiece.speedY = 0;
 	myGamePiece.speedX = 0;
+}
+
+function startGame() {
+	myGameArea.start();
+    myGamePiece = new component(40, 40, "meGusta1.png",10,120, "image");
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
 }
