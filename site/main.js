@@ -15,7 +15,7 @@ let myGameArea = {
         this.canvas.width = 600;
         this.canvas.height = 400;
         //Sets the speed of the blocks
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 15);
         //Initial frame
         this.frameNo = 0;
     },
