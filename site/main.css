@@ -1,10 +1,11 @@
 body {font-family: Lato, Arial;}
 
 a {
+    color: lightgrey;
     text-decoration: none;
     padding: 5px;
     transition: 0.5s;
-} 
+}
 
 button {
     width: 120px;
@@ -20,6 +21,8 @@ button {
 }
 
 .grid {
+    background-color: #EEE;
+    padding: 20px;
     text-align: center;
     display: grid;
     grid-gap: 21px;
@@ -45,6 +48,15 @@ button {
 }
 
 footer a:hover {
-    box-shadow: 3px 3px 3px #333;
+    color: black;
+    background-color: white;
+    box-shadow: 1px 1px 1px #EEE;
     transition: 0.5s;
+}
+
+footer {
+    font-size: 20px;
+    padding: 40px;
+    background-color: black;
+    color: white;
 }
