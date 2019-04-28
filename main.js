@@ -12,7 +12,7 @@ let myGameArea = {
         // "this" refers to the original object: myGameArea
         this.context = this.canvas.getContext("2d");
         //Sets the width and height of the canvas
-        this.canvas.width = 600;
+        this.canvas.width = 500;
         this.canvas.height = 400;
         //Sets the speed of the blocks
         this.interval = setInterval(updateGameArea, 15);
