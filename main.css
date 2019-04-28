@@ -1,4 +1,8 @@
-body {font-family: Lato, Arial;}
+body {
+    font-family: Lato;
+    background-image: url(wood.jpg);
+    background-size: cover;
+}
 
 a {
     color: lightgrey;
@@ -18,6 +22,16 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.primary {
+    background-color: #4CAF50;
+    transition: 0.3s;
+    width: 300px;
+}
+.primary:hover {
+    background-color: black;
+    transition: 0.3s;
 }
 
 .grid {
@@ -41,9 +55,9 @@ button {
 }
 
 #canvas {
-    display: block;
-    margin: auto;
     background-color: lightgrey;
+    width: 600px;
+    height: 400px;
 }
 
 footer a:hover {
